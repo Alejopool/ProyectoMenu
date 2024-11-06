@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Login Page">
+  <meta name="author" content="Tu Nombre">
+  <title>Login</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="{{ url_for('static', filename='css/signin.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+  <!-- Bootstrap JS -->
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</head>
+<body class="text-center"> 
+  <main class="form-signin">
+    <form method="POST" action="{{ url_for('llevar_Home') }}">
+      <img class="mb-4" src="{{ url_for('static', filename='Img/IconoLogin.jpeg') }}" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Por favor Inicie Sesion</h1>
+
+      <!-- Mostrar mensajes flash si existen -->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="alert alert-dismissible fade show mt-3" role="alert">
+            {% for category, message in messages %}
+              <strong>{{ message }}</strong>
+            {% endfor %}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      <div class="form-floating">
+        <input type="text" class="form-control" id="UsuarioLogin" name="UsuarioLogin" placeholder="Alejopool" required>
+        <label for="UsuarioLogin">Usuario</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="ContrasenaLogin" name="ContrasenaLogin" placeholder="Password" required>
+        <label for="ContrasenaLogin">Contraseña</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesion</button>
+      <p class="mt-5 mb-3 text-muted">Alejandro, Kevin, Ricardo, Ilbar</p>
+    </form>
+  </main> 
+</body>
+</html>
