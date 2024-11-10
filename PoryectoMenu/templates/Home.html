@@ -13,6 +13,7 @@
 
   <!-- Bootstrap JS -->
   <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/mi_archivo.js')}}"></script>
 
     <style>
       .bd-placeholder-img {
@@ -78,7 +79,7 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Descripcion</h1>
-        <p class="lead text-muted">Mis amores aca deben de poner la descripcion del proyecto</p>
+        <p class="lead text-muted">El objetivo de este proyecto es permitir a los usuarios ingresar a una interfaz amigable para ejecutar ejercicios específicos que se explican en la descripción de cada punto.</p>
       </div>
     </div>
   </section>
@@ -89,14 +90,14 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> <!--Desde aca empiezan los contenedores  este es el de contador Vocales-->
         <div class="col">
           <div class="card shadow-sm">
-           <img src="{{ url_for('static', filename='Img/IconoLogin.jpeg') }}" alt="">
+           <img src="{{ url_for('static', filename='Img/sustentacion/vocales.png') }}" alt="">
 
             <div class="card-body">
               <p class="card-text">Funcion que me compara dos cadeneas, si son iguales contar vocales y decir cuales, 
                 si son diferentes aparece en pantalla las cadenas no son iguales </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Presione Click</button>
+                  <button id="boton_contar_vocales" type="button" class="btn btn-sm btn-outline-secondary">Click Aqui</button>
                 </div>
                 <small class="text-muted">Contar Vocales</small>
               </div>
@@ -112,7 +113,7 @@
                 <p class="card-text">Esta función que se presenta recibe dos cadenas de texto como parámetros y tiene como objetivo verificar si una de ellas es subcadena de la otra </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Presione Click</button>
+                    <button id="boton_sub_cadena" type="button" class="btn btn-sm btn-outline-secondary">Click Aqui</button>
                   </div>
                   <small class="text-muted">Buscar Sub Cadena</small>
                 </div>
@@ -128,7 +129,7 @@
                 <p class="card-text">La función que se describe a continuación recibe un texto como entrada y tiene como objetivo identificar las palabras palíndromas dentro de ese texto. </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Presione Click</button>
+                    <button id="boton_palindromas" type="button" class="btn btn-sm btn-outline-secondary">Click Aqui</button>
                   </div>
                   <small class="text-muted">Buscar Palindromas</small>
                 </div>
@@ -144,7 +145,7 @@
                 <p class="card-text">La función que se presenta a continuación recibe un texto como entrada y tiene como objetivo poner la primera letra de la cadena en mayúsculas, dejando el resto del texto tal como está. </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Presione Click</button>
+                    <button id="buton_primera_mayuscula" type="button" class="btn btn-sm btn-outline-secondary">Click Aqui</button>
                   </div>
                   <small class="text-muted">primera letra mayuscula</small>
                 </div>
@@ -168,4 +169,80 @@
   </div>
 </footer>    
 </body>
+<!--este modal es de contando de vocales-->
+<div id="modal_contar_vocales" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ingrese cadenas para iniciar comparación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Ejecutar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--***********************************-->
+<!--este modal es el de sub cadena-->
+<div id="modal_sub_cadena" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ingrese cadenas para iniciar comparación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Ejecutar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--***********************************-->
+<!--este modal es el de buscar palindromas-->
+<div id="modal_palindromas" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ingrese texto para calcular palindromas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Ejecutar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--***********************************-->
+<!--este modal es el de primera letra mayuscula-->
+<div id="moda_primera_mayuscula" class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ingrese texto para convertir primera letra en mayuscula</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Ejecutar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--***********************************-->
 </html>
