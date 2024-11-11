@@ -107,7 +107,7 @@
 
         <div class="col"> <!--Este es el de Sub Cadenas-->
             <div class="card shadow-sm">
-             <img src="{{ url_for('static', filename='Img/IconoLogin.jpeg') }}" alt="">
+             <img height="222px" width="100%" src="{{ url_for('static', filename='Img/sustentacion/cadena_subcadena.png') }}" alt="">
   
               <div class="card-body">
                 <p class="card-text">Esta función que se presenta recibe dos cadenas de texto como parámetros y tiene como objetivo verificar si una de ellas es subcadena de la otra </p>
@@ -123,7 +123,7 @@
         
           <div class="col"> <!--Este es el de palindromas-->
             <div class="card shadow-sm">
-             <img src="{{ url_for('static', filename='Img/IconoLogin.jpeg') }}" alt="">
+             <img height="222px" width="100%" src="{{ url_for('static', filename='Img/sustentacion/Palindromas.png') }}" alt="">
   
               <div class="card-body">
                 <p class="card-text">La función que se describe a continuación recibe un texto como entrada y tiene como objetivo identificar las palabras palíndromas dentro de ese texto. </p>
@@ -139,7 +139,7 @@
 
           <div class="col"> <!-- este es el de primera letra en mayuscula-->
             <div class="card shadow-sm">
-             <img src="{{ url_for('static', filename='Img/IconoLogin.jpeg') }}" alt="">
+             <img height="222px" width="100%" src="{{ url_for('static', filename='Img/sustentacion/Primera_mayuscula.png') }}" alt="">
   
               <div class="card-body">
                 <p class="card-text">La función que se presenta a continuación recibe un texto como entrada y tiene como objetivo poner la primera letra de la cadena en mayúsculas, dejando el resto del texto tal como está. </p>
@@ -178,7 +178,32 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        {% if mensaje_error %}<!--rompe el HTML he ingresa el mensaje de error que viene desde Python-->
+        <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+          <h2 style="color:red;font-size:50px;">{{mensaje_error}}</h2>
+        </div>
+        {% endif %}
+        {% if resultados %}<!--rompe el HTML he ingresa el resultado que viene desde Python-->
+        <div class="col-md-12 d-flex align-items-center justify-content-center">
+          <h2 style="color:green;">Resultados:</h2> 
+        </div>
+        <div class="col-md-12 d-flex align-items-center justify-content-center">
+          <h3>Cadena 1:</h3>
+        </div>
+        {% for vocal, count in resultados['cadena1'].items() %}
+        <div class="col-md-12 d-flex align-items-center justify-content-center">
+          <p>Vocal {{ vocal }}: {{ count }} </p> 
+        </div>
+        {% endfor %}
+        <div class="col-md-12 d-flex align-items-center justify-content-center">
+          <h3>Cadena 2:</h3>  
+        </div>
+        {% for vocal, count in resultados['cadena2'].items() %}
+        <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+          <p>Vocal {{ vocal }}: {{ count }} </p> 
+        </div>
+        {% endfor %}
+        {% endif %}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
