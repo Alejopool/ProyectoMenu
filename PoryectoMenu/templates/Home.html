@@ -178,6 +178,23 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="col-md-12 d-flex align-items-center justify-content-center">
+          <form method="POST" action="/Home" class="row g-3">
+           <div class="col-auto">
+            <label for="Cadena1" class="visually-hidden">cadena 1</label>
+            <input type="text" class="form-control" id="Cadena1" name="Cadena1" placeholder="ingrese texto">
+           </div> 
+           <div class="col-auto">
+            <label for="Cadena2" class="visually-hidden">cadena 2</label>
+            <input type="text" class="form-control" id="Cadena2" name="Cadena2" placeholder="ingrese texto">
+           </div> 
+           <div class="col-auto">
+            <button type="submit" class="btn btn-secondary mb-3">Contar Vocales</button>
+           </div> 
+
+          </form>
+        </div>
+
         {% if mensaje_error %}<!--rompe el HTML he ingresa el mensaje de error que viene desde Python-->
         <div class="col-md-12 d-flex align-items-center justify-content-center"> 
           <h2 style="color:red;font-size:50px;">{{mensaje_error}}</h2>
@@ -207,7 +224,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Ejecutar</button>
       </div>
     </div>
   </div>
@@ -222,6 +238,22 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+          <form method="POST" action="/Home" class="row g-3">
+            <div class="col-auto">
+              <label for="Texto1" class="visually-hidden">Texto 1</label>
+              <input type="text" class="form-control" id="Texto1" name="Texto1" placeholder="ingrese texto">
+            </div>
+            <div class="col-auto">
+              <label for="Texto2" class="visually-hidden">Texto 2</label>
+              <input type="text" class="form-control" id="Texto2" name="Texto2" placeholder="ingrese texto">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-secondary mb-3">¿Subcadena?</button>
+            </div>
+          </form>
+           
+        </div>
       {% if Resultado %}
       <div class="col-md-12 d-flex align-items-center justify-content-center"> 
         <h2 style="color:red;font-size:50px">{{Resultado}} </h2>
@@ -230,7 +262,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Ejecutar</button>
       </div>
     </div>
   </div>
@@ -245,6 +276,18 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+          <form method="POST" action="/Home" class="row g-3">
+            <div class="col-auto">
+              <label for="Palindromas" class="visually-hidden">Ingrese texto</label>
+              <input type="text" class="form-control" id="Palindromas" name="Palindromas" placeholder="ingrese texto">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-secondary mb-3">Buscar palindromas</button>
+            </div>
+          </form>
+           
+        </div>
         {% if Resultado %}
         <div class="col-md-12 d-flex align-items-center justify-content-center"> 
           <h2 style="color:red;font-size:50px">{{Resultado|safe}} </h2>
@@ -253,7 +296,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Ejecutar</button>
       </div>
     </div>
   </div>
@@ -268,6 +310,18 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+          <form method="POST" action="/Home" class="row g-3">
+            <div class="col-auto">
+              <label for="Titulo" class="visually-hidden">Ingrese Titulo</label>
+              <input type="text" class="form-control" id="Titulo" name="Titulo" placeholder="ingrese titulo">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-secondary mb-3">Convertir</button>
+            </div>
+          </form>
+           
+        </div>  
         {% if Resultado %}
         <div class="col-md-12 d-flex align-items-center justify-content-center"> 
           <h2 style="color:red;font-size:50px">{{Resultado}} </h2>
@@ -277,7 +331,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Ejecutar</button>
       </div>
     </div>
   </div>

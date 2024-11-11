@@ -69,9 +69,9 @@ def FuncionPalindrioma(Parrafo):
     resultado += f"Hay {CantPalabraspalindromas} palabras palindromas en el texto digitado. <br>"
 
     if Palindroma:
-        resultado += "Palabras palindromas encontradas"
+        resultado += "Palabras palindromas encontradas <br>"
         for palabra in Palindroma:
-            resultado += f"{palabra}<br>"
+            resultado += f'<p class="text-dark">{palabra}</p><br>'
     else:
         resultado += "No se encontaron palabras palindromas encontradas. <br>"
 
@@ -141,8 +141,8 @@ def home():
     verificador = CadenaVerificadora()
 
     if request.method == "POST":
-        cadena1 = request.form.get("cadena1") # Extrae los valores que vienen desde HTML
-        cadena2 = request.form.get("cadena2")
+        cadena1 = request.form.get("Cadena1") # Extrae los valores que vienen desde HTML
+        cadena2 = request.form.get("Cadena2")
         Texto1 = request.form.get("Texto1")
         Texto2 = request.form.get("Texto2")
         Palindromas = request.form.get("Palindromas")
@@ -160,7 +160,8 @@ def home():
 
 
         if Titulo:
-            Resultado = f"Título recibido: {Titulo}"  
+            Mayusculas = titulo(Titulo)
+            Resultado = f"Título recibido: {Mayusculas}"  
 
     return render_template('Home.html', resultados=resultados, mensaje_error=mensaje_error, Resultado=Resultado)# Renderiza la plantilla con los resultados procesados
 
