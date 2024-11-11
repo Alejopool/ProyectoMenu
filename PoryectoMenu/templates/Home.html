@@ -222,7 +222,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+      {% if Resultado %}
+      <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+        <h2 style="color:red;font-size:50px">{{Resultado}} </h2>
+      </div>
+      {% endif %}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -241,7 +245,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        {% if Resultado %}
+        <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+          <h2 style="color:red;font-size:50px">{{Resultado|safe}} </h2>
+        </div>
+        {% endif %}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -260,7 +268,12 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        {% if Resultado %}
+        <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+          <h2 style="color:red;font-size:50px">{{Resultado}} </h2>
+        </div>
+        
+        {% endif %}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
