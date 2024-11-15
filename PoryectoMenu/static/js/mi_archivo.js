@@ -24,3 +24,34 @@ window.onload = function(){
         moda_primera_mayuscula.show()    
     })
 }
+
+function LimpiarEspacioVocales(){
+    const DivCampoVocales = document.getElementById('DivCampoVocales') 
+
+    let Limpiar = ""
+    DivCampoVocales.innerHTML = Limpiar
+
+}
+
+function LimpiarEspacioSubcadena(){
+    const DivCampoSubcadena = document.getElementById('DivCampoSubcadena')
+    let Limpiar = ""
+    DivCampoSubcadena.innerHTML = Limpiar
+
+}
+
+function LimpiarEspacioPalindromas(){
+    const DivCampoPalindromas = document.getElementById('DivCampoPalindromas')
+    let Limpiar = ""
+    DivCampoPalindromas.innerHTML = Limpiar
+
+}
+
+function LimpiarEspacioMayusculas(){
+    const DivCampoMayusculas = document.getElementById('DivCampoMayusculas')
+    let Limpiar = ""
+    DivCampoMayusculas.innerHTML = Limpiar
+
+}
+
+

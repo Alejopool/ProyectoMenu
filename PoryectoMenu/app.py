@@ -102,20 +102,6 @@ def  titulo(cadena):
 #-------------------------------------------------------------------------------------------
 
 
-
-
-
-
-    
-
-
-
-
-
-        
-
-
-
 @app.route('/')  # Inicializa el proyecto en la ruta Raiz 
 def llevar_Login(): 
     return render_template('Login.html')

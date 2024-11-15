@@ -194,36 +194,38 @@
 
           </form>
         </div>
-
-        {% if mensaje_error %}<!--rompe el HTML he ingresa el mensaje de error que viene desde Python-->
-        <div class="col-md-12 d-flex align-items-center justify-content-center"> 
-          <h2 style="color:red;font-size:50px;">{{mensaje_error}}</h2>
+        <div id="DivCampoVocales"> 
+          {% if mensaje_error %}<!--rompe el HTML he ingresa el mensaje de error que viene desde Python-->
+          <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+            <h2 style="color:red;font-size:50px;">{{mensaje_error}}</h2>
+          </div>
+          {% endif %}
+          {% if resultados %}<!--rompe el HTML he ingresa el resultado que viene desde Python-->
+          <div class="col-md-12 d-flex align-items-center justify-content-center">
+            <h2 style="color:green;">Resultados:</h2> 
+          </div>
+          <div class="col-md-12 d-flex align-items-center justify-content-center">
+            <h3>Cadena 1:</h3>
+          </div>
+          {% for vocal, count in resultados['cadena1'].items() %}
+          <div class="col-md-12 d-flex align-items-center justify-content-center">
+            <p>Vocal {{ vocal }}: {{ count }} </p> 
+          </div>
+          {% endfor %}
+          <div class="col-md-12 d-flex align-items-center justify-content-center">
+            <h3>Cadena 2:</h3>  
+          </div>
+          {% for vocal, count in resultados['cadena2'].items() %}
+          <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+            <p>Vocal {{ vocal }}: {{ count }} </p> 
+          </div>
+          {% endfor %}
+          {% endif %}
         </div>
-        {% endif %}
-        {% if resultados %}<!--rompe el HTML he ingresa el resultado que viene desde Python-->
-        <div class="col-md-12 d-flex align-items-center justify-content-center">
-          <h2 style="color:green;">Resultados:</h2> 
-        </div>
-        <div class="col-md-12 d-flex align-items-center justify-content-center">
-          <h3>Cadena 1:</h3>
-        </div>
-        {% for vocal, count in resultados['cadena1'].items() %}
-        <div class="col-md-12 d-flex align-items-center justify-content-center">
-          <p>Vocal {{ vocal }}: {{ count }} </p> 
-        </div>
-        {% endfor %}
-        <div class="col-md-12 d-flex align-items-center justify-content-center">
-          <h3>Cadena 2:</h3>  
-        </div>
-        {% for vocal, count in resultados['cadena2'].items() %}
-        <div class="col-md-12 d-flex align-items-center justify-content-center"> 
-          <p>Vocal {{ vocal }}: {{ count }} </p> 
-        </div>
-        {% endfor %}
-        {% endif %}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-secondary" onclick="LimpiarEspacioVocales()">Limpiar</button>
       </div>
     </div>
   </div>
@@ -254,14 +256,19 @@
           </form>
            
         </div>
-      {% if Resultado %}
-      <div class="col-md-12 d-flex align-items-center justify-content-center"> 
-        <h2 style="color:red;font-size:50px">{{Resultado}} </h2>
-      </div>
-      {% endif %}
+        <div id="DivCampoSubcadena">
+          {% if Resultado %}
+          <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+            <h2 style="color:red;font-size:50px">{{Resultado}} </h2>
+          </div>
+          {% endif %}
+        </div>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-secondary" onclick="LimpiarEspacioSubcadena()" >Limpiar</button>
+
       </div>
     </div>
   </div>
@@ -288,14 +295,19 @@
           </form>
            
         </div>
-        {% if Resultado %}
-        <div class="col-md-12 d-flex align-items-center justify-content-center"> 
-          <h2 style="color:red;font-size:50px">{{Resultado|safe}} </h2>
+        <div id="DivCampoPalindromas">
+          {% if Resultado %}
+          <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+            <h2 style="color:red;font-size:50px">{{Resultado|safe}} </h2>
+          </div>
+          {% endif %}
         </div>
-        {% endif %}
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-secondary" onclick="LimpiarEspacioPalindromas()">Limpiar</button>
+
       </div>
     </div>
   </div>
@@ -322,15 +334,20 @@
           </form>
            
         </div>  
-        {% if Resultado %}
-        <div class="col-md-12 d-flex align-items-center justify-content-center"> 
-          <h2 style="color:red;font-size:50px">{{Resultado}} </h2>
+        <div id="DivCampoMayusculas"> 
+          {% if Resultado %}
+          <div class="col-md-12 d-flex align-items-center justify-content-center"> 
+            <h2 style="color:red;font-size:50px">{{Resultado}} </h2>
+          </div>
+          
+          {% endif %} 
         </div>
-        
-        {% endif %}
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-secondary" onclick="LimpiarEspacioMayusculas()">Limpiar</button>
+
       </div>
     </div>
   </div>
