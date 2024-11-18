@@ -20,12 +20,12 @@
         <section class="section" id="introduccion">
             <h2>Introducción</h2>
             <p>
-              <!--esta merga toca cambiarla-->  Este documento tiene como propósito exponer la justificación y sustentación de la elección de la herramienta de software que se implementará en el área de gestión de proyectos de nuestra empresa. La elección de la herramienta está basada en un análisis exhaustivo de diversas opciones y se seleccionó la que mejor se adapta a nuestras necesidades actuales y futuras.
+                En esta sección se mostrara todo lo que se realizo para la creación del proyecto final, para tal efecto, se divide en tres segmentos la sustentación del proyecto, una primera parte que mostrara  la estructura del proyecto, la segunda que mostrara el backend y finalmente en la ultima parte se mostrara el fronted del proyecto. 
             </p>
         </section>
 
         <section class="section" id="analisis">
-            <h2>Herramientas utilizadas</h2>
+            <h2>1.0 Estructura del proyecto</h2>
             <p>
                 Este proyecto se basa en una metodología que aprovecha el motor de plantillas Jinja2, permitiendo la creación dinámica y eficiente de contenido HTML en el frontend a partir de datos proporcionados desde el backend. Las herramientas empleadas en el desarrollo incluyen tecnologías clave para garantizar un flujo de trabajo optimizado y una experiencia de usuario interactiva y adaptable; las herramientas empleadas en el proyecto son:
             </p>
@@ -36,16 +36,65 @@
                 <li><strong>Bootstrap:</strong> Esta biblioteca de diseño front-end facilitó la creación de una interfaz responsiva, estéticamente atractiva y compatible con múltiples dispositivos, optimizando el diseño sin comprometer el rendimiento.</li>
                 <li><strong>VS Code:</strong> VS Code fue el entorno de desarrollo principal, ofreciendo una experiencia optimizada con extensiones específicas para Python, Flask y herramientas de depuración, lo cual mejoró la eficiencia en el desarrollo y mantuvo la calidad del código.</li>
 
+
             </ol>
+            <h3><i>Ramificación de carpetas</i></h3>
+            <img src="{{ url_for('static', filename='Img/sustentacion/Raiz.png') }}" alt="">
+            <img src="{{ url_for('static', filename='Img/sustentacion/css.png') }}" alt="">
+            <img src="{{ url_for('static', filename='Img/sustentacion/imagenes.png') }}" alt="">
+            <img src="{{ url_for('static', filename='Img/sustentacion/js.png') }}" alt="">
+            <img src="{{ url_for('static', filename='Img/sustentacion/plantillas.png') }}" alt="">
+            <p>En las  imagenes se presenta la estructura general del proyecto, donde encontramos de derecha a izquierda como se encuentra compuesto el proyecto, podemos visualizar una carpeta llamada <strong>static</strong> , la cual contiene dentro tres carpetas mas llamadas <strong><i>css,img y js</i></strong> , al mismo nivel de static tenemos una carpeta llamada <strong>templates</strong> y  tanto <strong> static</strong> como <strong>templates</strong> y el archivo <strong>app.py</strong> estan dentro de la carpeta <strong>PROYECTOMENU</strong>, en la cual se contiene toda la estructura del proyecto.</p>
+            <h4><i>Contenido de las carpetas</i></h4>
+            <ol>
+                <li><strong>Css:</strong> En esta carpeta tenemos el  boostrap 5.3, el cual nos ayuda con la creacion del codigo en html para el diseño del fronted.</li>
+                <li><strong>Img:</strong> En la carpeta img tenemos cada una de las imagenes que se usaron en el proyecto, aqui tenemos las imagenes del proyecto, de la sustentacion y del manual de usuario.</li>
+                <li><strong>Js:</strong> Aqui se encuentran los archivos extraibles en Javascript para hacer posible ciertas funcionalidades del fronted dentro del proyecto.</li>
+                <li><strong>Templates:</strong> Se almacenan cada una de las plantillas html para el proyecto.</li>
+                <li><strong>App.py:</strong> El archivo app.py es en el cual se encuentra todo el codigo del backend, que controla el codigo del proyecto y que determina la funcionalidad de los modulos que se visualizan en el fronted.</li>
+
+            </ol>
+
         </section>
 
         <section class="section" id="conclusion">
-            <h2>Desarrollo del proyecto</h2>
+            <h2>2.0 Backend</h2>
             <p>
-                Tras realizar un análisis detallado de las opciones disponibles, hemos determinado que la herramienta "ProjectMaster" es la mejor opción para nuestras necesidades. Esta herramienta ofrece una interfaz intuitiva, tiene un conjunto de funcionalidades completo y su costo es competitivo. Además, el soporte al cliente de "ProjectMaster" ha sido calificado como excelente por otros usuarios.
+                Luego de tener clara la estructura del proyecto, se entrara en el codigo o backend del proyecto, donde se encontrara el codigo que posteriormente se enlazara con html para que pase verse en consola a verse en una interfaz grafica.
             </p>
+            <h3><i>Framework Flask</i></h3>
+            <p>Para enlazar el backend con el el fronted, utilizamos el framework <strong>flask</strong> , en este caso no llamamos todo el framework, solo importamos lo que requerimos para el proyecto, por eso como se ve acontinuacion especificamos lo que importaremos de flask como se ve en la linea de codigo. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/flask.png') }}" alt="">
+            <h3 style="margin-top: 20px;"><i>Codigo de los modulos</i></h3>
+            <p>Los modulos son los 4 ejercicios tomados de parciales anteriores, cada modulo es un ejercicio y para que fuera posible mostrar en pantalla y no en consola, se tuvo que modificar el codigo, especificamente los print que se utilizaban para imprimir por consola, se debieron modificar por medio de return, para que pudiese mostrarse en la interfaz grafica como se muestra en las siguientes imagenes del codigo de cada modulo. </p>
+            <h4><i>Modulo #1 (Contar Vocales)</i></h4>
+            <p>En el primer modulo se tiene que realizar dos cosas, la primera comparar si las cadenas son iguales y almacenar el resultado en una lista  para poder devolverlo al html y segundo generar la funcion para contar vocales dado el caso que ambas cadenas de texto sean iguales, podemos ver como el print se elimina y se usa el return.</p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/cont_cadena.png') }}" alt="">
+            <img src="{{ url_for('static', filename='Img/sustentacion/conta_vocales.png') }}" alt="">
+            <h4 style="margin-top: 40px;"><i>Modulo #2 (Buscar Sub Cadena)</i></h4>
+            <p>En este segundo modulo se realiza la verificacion de dos cadenas donde determinamos cual de las dos es larga y cual es mas corta, dada esa verificacion , evaluamos si la cadena corta esta en la larga que nos retorne el mensaje de que la corta es subcadena de la cadena larga, si se da lo contrario que nos retorne que la cadena corta no es subcadena de la cadena larga. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/subcadenas.png') }}" alt="">
+            <h4 style="margin-top: 40px;"><i>Modulo #3 (Buscar Palindromas)</i></h4>
+            <p>En el tercer modulo se determina los numeros de espacios que puedan existir en un parrafo, se separa el parrafo en palabras, volviendolas subcadenas para identificar si existen palabras palindromas y determinar cuantas existen, por ultimo en el codigo le pedimos que nos recorra la lista y nos diga cuales son las palabras palindromas que existen en la lista donde se almacenaron y las muestre en pantalla, si no hay palindroma le pedimos al codigo que muestre el mensaje "No se encontraron palabras palindromas". </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/Palindromas_py.png') }}" alt="">
+            <h4 style="margin-top: 40px;"><i>Modulo #4 (Primera letra mayuscula)</i></h4>
+            <p>En el ultimo modulo se realizo un codigo que permitiera colocar la prfimera letra en mayuscula de cada palabra, como se requiere que sean palabras para colocarle mayuscula, empezamos eliminando errores al verficar que el texto ingresado no fuera un numero, si lo es, nos arrojara como respuesta que lo que acaba de digitar son numeros, si no son numeros el programa separara la frase ingresada en subcadenas y colocara la primera letra en mayuscula con ayuda del .capitalize() y nos retornara la frase con las primeras letras de cada palabra en mayuscula. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/letra_mayuscula.png') }}" alt="">
+            <h3 style="margin-top: 40px;"><i>Rutas Python y Html</i></h3>
+            <p>Hasta este punto se ha mostrado la logica de los modulos que se desarrollaron para el proyecto, y para finalizar con el backend , se mostraran las rutas del proyecto desde python hacia html, tambien se observara como se extraen los valores y se almacenan en cada variable dependiendo de que ejercicio vengan, al final hay una imagen que muestra la ruta para la seleccion del manual de usuario y de la sustentacion, tambien se ve  el if _name_ == 'main' que nos crear el proyecto en un entorno de programacion local para este proyecto especifico.
+            </p>
+            <h4 style="margin-top: 30px;"><i>Ruta raiz, login y home</i></h4>
+            <p>Se muestra la ruta de inicio del proyecto en la raiz, tambien se muestra el inicio del login, donde se solicitia las credenciales y se verifica que sean correctas para pasar al home, de lo contrario que retorne al login,  y en el ultimo bloque de codigo se muestra las variables donde se almacenan los resultados</p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/Rutas.png') }}" alt="">
+            <h4 style="margin-top: 30px;"><i>Datos</i></h4>
+            <p>En este bloque de codigo se  extrae los valores que viene del html y se verifica de que modulo vienen para retornarlo en el home y poder visualizar el resultado en la interfaz grafica</p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/valores.png') }}" alt="">
+            <h4 style="margin-top: 30px;"><i>Ruta sustentacion y manual de usuario</i></h4>
+            <p>Al igual que en las primeras rutas, aqui se muestra la ruta para seleccionar entre sustentacion y manual de usuario, dejando que si no es alguna de las dos opciones se de, vuelva a la plantilla home, para finalizar el backend tenemos el <i><strong>if _name_ == 'main'.</strong></i></p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/susten_manual_home.png') }}" alt="">
+
             <div class="quote">
-                "La selección de una herramienta adecuada para la gestión de proyectos no solo optimiza los procesos, sino que también facilita la colaboración entre los miembros del equipo." - Equipo de TI
+                "<strong>Nota : </strong>Asi se da final a todo el backend del proyecto y pasamos al fronted donde se mostraran aspectos como los modal, contenedores  y demas elementos usados en el diseño del fronted."
             </div>
         </section>
 

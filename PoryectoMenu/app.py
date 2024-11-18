@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 app = Flask(__name__)
 app.secret_key = 'mi_clave_secreta'  # esto solo es una linea necesaria para usar flash
 
-#--------------------------Funciones para contar vocales-----------------------------------
+#--------------------------Modulo  contar vocales-----------------------------------
 def contar_cadena(Cadena1, Cadena2): # funcion que almacena el resultado para devolver al html
 
     resultados = {}
@@ -21,7 +21,7 @@ def contar_cadena(Cadena1, Cadena2): # funcion que almacena el resultado para de
         return "Las cadenas no tienen la misma cantidad de caracteres", resultados
     
     return None,resultados 
-
+#--------------------------Modulo  contar vocales-----------------------------------
 def contar_vocales(cadena):  # funcion para contar las vocales
 
     cadena = cadena.lower() #coloca toda la cadena en minusculas
@@ -73,7 +73,7 @@ def FuncionPalindrioma(Parrafo):
         for palabra in Palindroma:
             resultado += f'<p class="text-dark">{palabra}</p><br>'
     else:
-        resultado += "No se encontaron palabras palindromas encontradas. <br>"
+        resultado += "No se encontaron palabras palindromas . <br>"
 
     return resultado
 
