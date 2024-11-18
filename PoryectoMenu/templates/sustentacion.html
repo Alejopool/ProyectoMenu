@@ -97,16 +97,65 @@
                 "<strong>Nota : </strong>Asi se da final a todo el backend del proyecto y pasamos al fronted donde se mostraran aspectos como los modal, contenedores  y demas elementos usados en el diseño del fronted."
             </div>
         </section>
-
-        <section class="section" id="referencias">
-            <h2>Referencias</h2>
-            <p>Las fuentes utilizadas para la elaboración de este documento incluyen:</p>
-            <ul>
-                <li>Estudio comparativo de herramientas de gestión de proyectos - TechAnalysis, 2023.</li>
-                <li>Reporte de usuarios de ProjectMaster - ProjectMaster Inc., 2023.</li>
-                <li>Guía de herramientas de software para empresas medianas - Software Solutions, 2022.</li>
-            </ul>
+        <section class"section" id"fronted_sustentacion">
+            <h2>3.0 Fronted</h2>
+            <p>Mostraremos a través de una interfaz grafica un proyecto organizado compatible con distintos dispositivos basado en un modelo responsive, con una estructura simetría, amigable con el usuario y fácil de usar. </p>
+            <h3><i>Cabezera HTML</i></h3
+            <p>En esta parte de la cabecera del documento de HTML encontramos en su respectivo orden: Declaración estándar para que el navegador interprete las normas de HTML5, la configuración para visualización en dispositivos móviles con ajuste a la pantalla del dispositivo y el nivel de zoom inicial de página, descripción del contenido de la pagina para el motor de búsqueda (esta vacío), referencia a los creadores de Bootstrap, versión 0.84.0. de Hugo fue la utilizada en el desarrollo del proyecto. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/bloque_inicial.png') }}">
+            <h3 style="margin-top: 20px;"><i>Bootstrap CSS y JS</i></h3>
+            <p>Enlaza archivos externos a una página WEB, usando la biblioteca de Flask para enlazar con Python. 
+                La primera etiqueta nos permite enlazar en Bootstrap la biblioteca de CSS y JavaScript para el diseño de interfases, y la segunda carga los archivos desde la carpeta estática. 
+            </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/bootstrap_css_js.png') }}">
+            <h3 style="margin-top: 40px;"><i>Estilo Responsive</i></h3>
+            <p>Estilos diseñados para que el contenido se ajuste a diferentes tipos de pantalla donde se visualice el contenido, (para pantallas pequeñas se bloqueó la opción de selección, con la finalidad de hacerlo más fácil de desplazar).</p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/estilos_responsive.png') }}">
+            <h3 style="margin-top: 40px;"><i>Documentación</i></h3>
+            <p>El bloque de HTML de esta sección muestra un encabezado con una sección que se despliega al presionar un botón especifico, dando paso a un menú de selección múltiple (Sustentación o manual de usuario) que nos redirige a la siguiente etapa de consulta del usuario, para el proceso contamos también con un botón de confirmación. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/documentacion_1.png') }}">
+            <br></br>
+            <img src="{{ url_for('static', filename='Img/sustentacion/documentacion_2.png') }}">
+            <h3 style="margin-top: 40px;"><i>Contenido principal</i></h3>
+            <p>En este bloque de código encontramos los títulos principales de nuestro proyecto enmarcado en una etiqueta que nos menciona que son el contenido principal en el diseño, a través del uso de Bootstrap y nuestras clases personalizadas de CSS entregamos los estilos de los módulos a desarrollar.</p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/contenido_principal.png') }}">
+            <h3 style="margin-top: 40px;"><i>Contar Vocales</i></h3>
+            <p>Este bloque de código nos permite ejecutar nuestro primer modulo “Contar Vocales” quien se encarga de generarme una tarjeta con una imagen amigable que nos brinda una interfaz grafica mas agradable al usuario, ejecuta el proceso usado en nuestro Backend para determinado ejercicio el cual tiene su descripción de función en la misma tarjeta. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/contar_vocales.png') }}">
+            <h3 style="margin-top: 40px;"><i>Sub cadena</i></h3>
+            <p>Para esta tarjeta encontramos nuestro segundo modulo “Buscar Sub Cadena” donde tenemos también una clase que estandariza el tamaño de la imagen en la tarjeta con la finalidad de entregar un diseño simétrico en las mismas. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/sub_cadenas.png') }}">
+            <h3 style="margin-top: 40px;"><i>Palíndromas</i></h3>
+            <p>Esta tarjeta me presenta el tercer modulo “Palíndromas” en la cual también encontramos nuestra interfaz de tipo responsive acompañada de una serie de botones que permiten la correcta navegación y ejecución del módulo. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/palindromas_1.png') }}">
+            <h3 style="margin-top: 40px;"><i>Primera Letra Mayúscula</i></h3>
+            <p>La tarjeta numero 4 presenta nuestro ultimo modulo “Primera Letra Mayúscula” donde enmarcamos lo simétrico de la interfaz gráfica, entregando un modelado no solo amigable sino intuitivo y fácil de usar para nuestros usuarios. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/primera_mayuscula_1.png') }}">
+            <h3 style="margin-top: 40px;"><i>Volver arriba</i></h3>
+            <p>Este pequeño pie de pagina nos entrega una pequeña descripción del objetivo del proyecto y una función de regresar arriba.</p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/volver_arriba.png') }}">
+            <h3 style="margin-top: 40px;"><i>Modal Contar Vocales</i></h3>
+            <p>Nos enseña a través de una venta emergente la interfaz de procesamiento del tipo de problema que se plantea en el módulo en cuestión, cuenta con un espacio estructurado por botones, títulos y espacios para ingresar texto. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/modal_vocales_1.png') }}">
+            <br></br>
+            <img src="{{ url_for('static', filename='Img/sustentacion/modal_vocales_2.png') }}">
+            <h3 style="margin-top: 40px;"><i>Modal Sub cadena</i></h3>
+            <p>En la estructura de construcción de nuestro nodal usamos el framework de Bootstrap que nos proporciona toda la eficiencia necesaria para entregar una gama personalizable dentro de nuestra pestaña emergente. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/modal_subcadena_1.png') }}">
+            <br></br>
+            <img src="{{ url_for('static', filename='Img/sustentacion/modal_subcadena_2.png') }}">
+            <h3 style="margin-top: 40px;"><i>Modal Palíndromas</i></h3>
+            <p>Encontramos en nuestro de bloque de código las funciones que permiten que las funciones de procesamiento enlacen directamente con nuestro Backend. </p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/modal_palindromas_1.png') }}">
+            <br></br>
+            <img src="{{ url_for('static', filename='Img/sustentacion/modal_palindroma_2.png') }}">
+            <h3 style="margin-top: 40px;"><i>Modal Primera Letra Mayúscula</i></h3>
+            <p>Las clases y estilos personalizados de nuestra configuración entregan una parte visual a la que es fácil acostumbrarse por lo estandarizado de los mismo, y esta enlazado directamente con el ingreso en las tarjetas del contenido principal del proyecto.</p>
+            <img src="{{ url_for('static', filename='Img/sustentacion/modal_primeramayuscula_1.png') }}">
+            <br></br>
+            <img src="{{ url_for('static', filename='Img/sustentacion/modal_primeramayuscula_2.png') }}">
         </section>
+
     </div>   
 </body>
 </html>
